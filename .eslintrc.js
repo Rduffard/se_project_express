@@ -23,6 +23,6 @@ module.exports = {
   },
   rules: {
     "no-console": ["warn", { allow: ["error"] }],
-    "no-underscore-dangle": ["off"],
+    "no-underscore-dangle": ["error", { allow: ["_id"] }],
   },
 };
