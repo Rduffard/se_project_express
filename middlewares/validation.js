@@ -12,6 +12,7 @@ const validateURL = (value, helpers) => {
  * 1) Clothing item body when an item is created
  * - name: required string 2–30
  * - imageUrl: required URL
+ * - weather: required string ("hot" | "warm" | "cold")
  */
 module.exports.validateClothingItemBody = celebrate({
   body: Joi.object().keys({
@@ -26,6 +27,12 @@ module.exports.validateClothingItemBody = celebrate({
       "string.empty": 'The "imageUrl" field must be filled in',
       "string.uri": 'The "imageUrl" field must be a valid url',
       "any.required": 'The "imageUrl" field must be filled in',
+    }),
+
+    weather: Joi.string().required().valid("hot", "warm", "cold").messages({
+      "any.only": 'The "weather" field must be one of: hot, warm, cold',
+      "string.empty": 'The "weather" field must be filled in',
+      "any.required": 'The "weather" field must be filled in',
     }),
   }),
 });

@@ -82,8 +82,9 @@ Authorization: Bearer <JWT>
 
 ## Link
 
-- github repository: https://github.com/Rduffard/se_project_express
-- domain: https://wtwrdemo.jumpingcrab.com
+- Github Repository: https://github.com/Rduffard/se_project_express
+- Frontend Repository: https://github.com/Rduffard/se_project_react
+- Domain: https://wtwrdemo.jumpingcrab.com
 
 ## Project Pitch Video
 
